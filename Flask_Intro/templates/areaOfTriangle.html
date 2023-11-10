@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Triangle</title>
+</head>
+
+<style>
+
+    body {
+        background: url("/static/mountain.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    label, h1, input, p {
+        font-family: 'Courier New', monospace;
+        text-align: center;
+    }
+
+
+    form {
+        margin: 0 auto;
+        width: 170px;
+    }
+
+</style>
+
+<body>
+    <h1>AREA OF TRIANGLE</h1>
+
+    <form action="/areaOfTriangle" method="post">
+        <label for="inputBase">Enter the base: </label>
+        <input type="number" id="inputBase" name="inputBase">
+        <br>
+
+        <label for="inputHeight">Enter the height:</label>
+        <input type="number" id="inputHeight" name="inputHeight">
+        <br>
+
+        <input type="submit" value="Get Area">
+    </form>
+
+    {% if result %}`
+    <p>The area of triangle is <b>{{ result }} </b></p>
+    {% endif %}
+</body>
+</html>

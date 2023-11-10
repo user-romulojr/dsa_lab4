@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+</head>
+
+<style>
+
+    body {
+        background: url("/static/mountain.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    label, h1, input, p {
+        font-family: 'Courier New', monospace;
+        text-align: center;
+    }
+
+
+    form {
+        margin: 0 auto;
+        width: 420px;
+    }
+    
+</style>
+
+<body>
+    <h1>CONVERT STRING TO UPPERCASE</h1>
+
+    <form action="/touppercase" method="post">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString">
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if result %}
+    <p>Converted string: <b> {{ result }} </b></p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Page</title>
+</head>
+
+<style>
+
+    body {
+        background: url("/static/mountain.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    label, h2, input, p {
+        font-family: 'Courier New', monospace;
+        text-align: center;
+    } 
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 8%;
+    }
+    
+</style>
+
+<body>
+    <img src="{{ url_for('static', filename='image.png') }}">
+
+    <h2>Hello</h2>
+    <p>Name: Romulo D. Ramos Jr.</p>
+    <p>Course and Section: BSCPE 2-6</p>
+    <p>Subject: Data Structures and Algorithms</p>
+    <p>Motto: Time is silver</p>
+
+</body>
+</html>

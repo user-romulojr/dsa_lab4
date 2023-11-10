@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Circle</title>
+</head>
+
+<style>
+
+    body {
+        background: url("/static/mountain.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    label, h1, input, p {
+        font-family: 'Courier New', monospace;
+       text-align: center;
+    } 
+
+
+    form {
+        margin: 0 auto;
+        width: 420px;
+    }
+
+</style>
+
+<body>
+    <h1>AREA OF CIRCLE</h1>
+
+    <form action="/areaOfcircle" method="post">
+        <label for="inputRadius">Enter the radius:</label>
+        <input type="number" id="inputRadius" name="inputRadius">
+        <input type="submit" value="Get Area">
+    </form>
+
+    {% if result %}
+    <p>The area of the circle is <b>{{ result }}</b></p>
+    {% endif %}
+</body>
+</html>
